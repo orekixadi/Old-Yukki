@@ -38,11 +38,11 @@ pstart_markup=InlineKeyboardMarkup(
                 [InlineKeyboardButton("🧰 Cᴏᴍᴍᴀɴᴅꜱ 🧰", url=f"https://telegra.ph/Chutuya-11-27")],
                 [
                     InlineKeyboardButton(
-                        "📢 Uᴘᴅᴀᴛᴇꜱ 📢", url=f"https://t.me/xMentosUpdates"), 
+                        "📢 Uᴘᴅᴀᴛᴇꜱ 📢", url=f"https://t.me/LOVEisAslowPOISION"), 
                     InlineKeyboardButton(
-                        "💬 Sᴜᴘᴘᴏʀᴛ 💬", url=f"https://t.me/xMentosSupport")
+                        "💬 Sᴜᴘᴘᴏʀᴛ 💬", url=f"https://t.me/LOVEisAslowPOISION")
                 ],
-                [ InlineKeyboardButton("🧑‍💻 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 🧑‍💻", url=f"https://GitHub.com/ToxicCybers/MentosMusic"),]
+                [ InlineKeyboardButton("🧑‍💻 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 🧑‍💻", url=f"https://github.com/orekixadi/adi"),]
 
             ]
         )
