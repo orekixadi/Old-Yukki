@@ -21,7 +21,5 @@ Hey Welcome To Here 💫💫 You Can Make Your Own Music Bot For Music 🎶
   <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-aqua?style=flat&logo=heroku" width="325" height="50.100" /></a></p>
 
 ## CREDIT ❤
-```
 <a href="https://t.me/iLOSTinY0U"><img src="https://img.shields.io/badge/Join-Telegram%20OWNER-red.svg?logo=Telegram"></a>
-```
 
