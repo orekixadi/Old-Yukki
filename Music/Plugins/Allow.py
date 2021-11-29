@@ -58,4 +58,4 @@ async def blacklisted_chats_func(_, message: Message):
     if not text:
         await message.reply_text("No Allowed Chats")  
     else:
-        await message.reply_text(text
+        await message.reply_text(text)
