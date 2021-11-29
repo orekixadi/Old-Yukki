@@ -3,7 +3,7 @@
 For Any Query Join Our Support Group 👥
 
 <a href="https://t.me/iLOSTinY0U"><img src="https://img.shields.io/badge/Join-Telegram%20OWNER-red.svg?logo=Telegram"></a>
-<a href="https://t.me/LOVEISASLOWPOISION"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
+<a href="https://t.me/LOVEISASLOWPOISION"><img src="https://img.shields.io/badge/Join-Telegram%20channel-blue.svg?logo=telegram"></a>
 
 # Special Thanks - [@OfficialYukki](https://t.me/OfficialYukki) 
 
