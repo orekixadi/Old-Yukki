@@ -21,7 +21,7 @@ from Music.MusicUtilities.database.sudo import (get_sudoers, get_sudoers, remove
 def start_pannel():  
     buttons  = [
             [
-                InlineKeyboardButton(text="🎚 Commands Menu", url="https://telegra.ph/Mentos-Music-11-27")
+                InlineKeyboardButton(text="🎚 Commands Menu", url="url=f"https://telegra.ph/OREKIXMUSIC-BOT-11-29")
             ],
             [ 
                 InlineKeyboardButton(text="📨Official Channel", url="https://t.me/LOVEisAslowPOISION"),
