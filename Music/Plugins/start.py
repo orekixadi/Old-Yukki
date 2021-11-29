@@ -42,7 +42,7 @@ pstart_markup=InlineKeyboardMarkup(
                     InlineKeyboardButton(
                         "💬 Sᴜᴘᴘᴏʀᴛ 💬", url=f"https://t.me/LOVEisAslowPOISION")
                 ],
-                [ InlineKeyboardButton("🧑‍💻 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 🧑‍💻", url=f"https://github.com/orekixadi/adi"),]
+                [ InlineKeyboardButton("🧑‍💻 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 🧑‍💻", url=f"https://github.com/orekixadi/orekimusicbot"),]
 
             ]
         )
