@@ -22,6 +22,6 @@ Hey Welcome To Here 💫💫 You Can Make Your Own Music Bot For Music 🎶
 
 ## CREDIT ❤
 ```
-https://t.me/iLOSTinY0U 🙃❤
+<a href="https://t.me/iLOSTinY0U"><img src="https://img.shields.io/badge/Join-Telegram%20OWNER-red.svg?logo=Telegram"></a>
 ```
 
