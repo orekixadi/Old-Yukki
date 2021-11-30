@@ -75,7 +75,7 @@ async def start(_, message: Message):
 #        await message.reply_text(f"**__Not in allowed chats.__**\n\nMusic Private is only for allowed chats. Ask any Sudo User to allow your chat.\nCheck Sudo Users List [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
 #        return await app.leave_chat(chat_id)
     out = start_pannel()
-    await message.reply_text(f"Thanks for adding me in {message.chat.title}.\nMusic is alive.\n\nFor any assistance or help, checkout our support group and channel.", reply_markup=InlineKeyboardMarkup(out[1]))
+    await message.reply_text(f"Thanks❤ for adding me in {message.chat.title}.\nMusic is alive.\n\nFor any assistance or help, checkout our support group and channel.", reply_markup=InlineKeyboardMarkup(out[1]))
     return
         
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
@@ -116,7 +116,7 @@ async def play(_, message: Message):
 📎**Channel Link:** [Visit From Here]({x["channel_url"]})
 🔗**Link:** [Link]({x["webpage_url"]})
 
-⚡️ __Searched Powered By Mentos Music Bot__"""
+⚡️ __Searched Powered By OREKIxMUSIC Bot__"""
             link = (x["webpage_url"])
             buttons = personal_markup(link)
             userid = message.from_user.id
