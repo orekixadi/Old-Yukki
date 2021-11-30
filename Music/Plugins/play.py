@@ -1,3 +1,4 @@
+
 import os
 import time
 from os import path
@@ -58,7 +59,7 @@ def time_to_seconds(time):
 async def play(_, message: Message):
     chat_id = message.chat.id
     if not await is_served_chat(chat_id):
-        await message.reply_text(f"**__Not in allowed chats.__**\n\nZeus Pvt is only for allowed chats. Ask any Sudo User to allow your chat.\nCheck Sudo Users List [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
+        await message.reply_text(f"**__Not in allowed chats.__**\n\nOREKIxSONG Pvt is only for allowed chats. Ask any Sudo User to allow your chat.\nCheck Sudo Users List [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
         return await app.leave_chat(chat_id)  
     if message.sender_chat:
         return await message.reply_text("You're an __Anonymous Admin__!\nRevert back to User Account From Admin Rights.")  
@@ -73,7 +74,7 @@ async def play(_, message: Message):
         return await message.reply_text(f"Bot is under Maintenance. Sorry for the inconvenience!")
     a = await app.get_chat_member(message.chat.id , BOT_ID)
     if a.status != "administrator":
-        await message.reply_text(f"I need to be admin with some permissions:\n\n- **can_manage_voice_chats:** To manage voice chats\n- **can_delete_messages:** To delete Zeus Pvt's Searched Waste\n- **can_invite_users**: For inviting assistant to chat\n**can_restrict_members**: For Protecting Zeus Pvt from Spammers.")
+        await message.reply_text(f"I need to be admin with some permissions:\n\n- **can_manage_voice_chats:** To manage voice chats\n- **can_delete_messages:** To delete OREKIxSONG Pvt's Searched Waste\n- **can_invite_users**: For inviting assistant to chat\n**can_restrict_members**: For Protecting OREKIxSONG Pvt from Spammers.")
         return
     if not a.can_manage_voice_chats:
         await message.reply_text(
@@ -98,7 +99,7 @@ async def play(_, message: Message):
     try:
         b = await app.get_chat_member(message.chat.id , ASSID) 
         if b.status == "kicked":
-            await message.reply_text(f"{ASSNAME}(@{ASSUSERNAME}) is banned in your chat **{chat_title}**\n\nUnban it first to use Zeus Pvt")
+            await message.reply_text(f"{ASSNAME}(@{ASSUSERNAME}) is banned in your chat **{chat_title}**\n\nUnban it first to use OREKIxSONG Pvt")
             return
     except UserNotParticipant:
         if message.chat.username:
@@ -554,7 +555,7 @@ async def play_playlist_cmd(_, message):
     buttons = playlist_markup(user_name, user_id)
     await message.reply_photo(
     photo=thumb, 
-    caption=("**__Zeus Pvt's Playlist Feature__**\n\nSelect the Playlist you want to play!."),    
+    caption=("**__OREKIxSONG Pvt's Playlist Feature__**\n\nSelect the Playlist you want to play!."),    
     reply_markup=InlineKeyboardMarkup(buttons),
     )
     return
