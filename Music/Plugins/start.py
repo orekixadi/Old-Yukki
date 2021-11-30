@@ -75,7 +75,7 @@ async def start(_, message: Message):
 #        await message.reply_text(f"**__Not in allowed chats.__**\n\nMusic Private is only for allowed chats. Ask any Sudo User to allow your chat.\nCheck Sudo Users List [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
 #        return await app.leave_chat(chat_id)
     out = start_pannel()
-    await message.reply_text(f"Thanks for having me in {message.chat.title}.\nMusic is alive.\n\nFor any assistance or help, checkout our support group and channel.", reply_markup=InlineKeyboardMarkup(out[1]))
+    await message.reply_text(f"Thanks for adding me in {message.chat.title}.\nMusic is alive.\n\nFor any assistance or help, checkout our support group and channel.", reply_markup=InlineKeyboardMarkup(out[1]))
     return
         
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
@@ -85,7 +85,7 @@ async def play(_, message: Message):
         user_name = message.from_user.first_name
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")" 
         await app.send_message(message.chat.id,
-            text=f"Hello {rpk}!\n\nThis is MenTosMusic Bot.\nI play music on Telegram's Voice Chats.\n\nOnly for selected chats.",
+            text=f"Hello {rpk}!\n\nThis is OREKIxMUSIC Bot.\nI play music on Telegram's Voice Chats.\n\nOnly for selected chats.",
             parse_mode="markdown",
             reply_markup=pstart_markup,
             reply_to_message_id=message.message_id
