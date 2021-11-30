@@ -21,11 +21,11 @@ from Music.MusicUtilities.database.sudo import (get_sudoers, get_sudoers, remove
 def start_pannel():  
     buttons  = [
             [
-                InlineKeyboardButton(text="🎚 Commands Menu", url="https://telegra.ph/Mentos-Music-11-27")
+                InlineKeyboardButton(text="😊 OWNER", url="https://t.me/iLOSTinYOU")
             ],
             [ 
-                InlineKeyboardButton(text="📨Official Channel", url="https://t.me/xMentosUpdates"),
-                InlineKeyboardButton(text="📨Support Group", url="https://t.me/xMentosSupport")
+                InlineKeyboardButton(text="📨Official Channel", url="https://t.me/LOVEisAslowPOISION"),
+                InlineKeyboardButton(text="📨Support Group", url="https://t.me/LOVEisAslowPOISION")
             ],
     ]
     return "🎛  **This is Music Music Bot**", buttons
@@ -33,16 +33,16 @@ def start_pannel():
 pstart_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("💞 Sᴜᴍᴍᴏɴ Mᴇ 💞", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                    InlineKeyboardButton("💞 Add In Grp 💞", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
                 ], 
-                [InlineKeyboardButton("🧰 Cᴏᴍᴍᴀɴᴅꜱ 🧰", url=f"https://telegra.ph/Chutuya-11-27")],
+                [InlineKeyboardButton("🧰 OWNER 🧰", url=f"https://t.me/iLOSTinYOU")],
                 [
                     InlineKeyboardButton(
-                        "📢 Uᴘᴅᴀᴛᴇꜱ 📢", url=f"https://t.me/xMentosUpdates"), 
+                        "📢 Uᴘᴅᴀᴛᴇꜱ 📢", url=f"https://t.me/LOVEISASLOWPOISION"), 
                     InlineKeyboardButton(
-                        "💬 Sᴜᴘᴘᴏʀᴛ 💬", url=f"https://t.me/xMentosSupport")
+                        "💬 Sᴜᴘᴘᴏʀᴛ 💬", url=f"https://t.me/LOVEisAslowPOISION")
                 ],
-                [ InlineKeyboardButton("🧑‍💻 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 🧑‍💻", url=f"https://GitHub.com/ToxicCybers/MentosMusic"),]
+                [ InlineKeyboardButton("🧑‍💻 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 🧑‍💻", url=f"https://github.com/orekixadi/orekimusicbot"),]
 
             ]
         )
