@@ -21,7 +21,7 @@ from Music.MusicUtilities.database.sudo import (get_sudoers, get_sudoers, remove
 def start_pannel():  
     buttons  = [
             [
-                InlineKeyboardButton(text="😊 OWNER", url="https://t.me/iLOSTinY0U")
+                InlineKeyboardButton(text="🎛cmd list", url="https://telegra.ph/OREKIXMUSIC-BOT-11-29")
             ],
             [ 
                 InlineKeyboardButton(text="📨Official Channel", url="https://t.me/LOVEisAslowPOISION"),
@@ -33,9 +33,9 @@ def start_pannel():
 pstart_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("💞 Add In Grp 💞", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                    InlineKeyboardButton("+ Add In Grp +", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
                 ], 
-                [InlineKeyboardButton("🧰 OWNER 🧰", url=f"https://t.me/iLOSTinY0U")],
+                [InlineKeyboardButton("🎛CMD LIST", url=f"https://telegra.ph/OREKIXMUSIC-BOT-11-29")],
                 [
                     InlineKeyboardButton(
                         "📢 Uᴘᴅᴀᴛᴇꜱ 📢", url=f"https://t.me/LOVEISASLOWPOISION"), 
