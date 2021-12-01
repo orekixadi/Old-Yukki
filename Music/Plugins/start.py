@@ -56,9 +56,9 @@ async def welcome(_, message: Message):
     for member in message.new_chat_members:
         try:
             if member.id in OWNER:
-                return await message.reply_text(f"Call the Avengers, Music Owner[{member.mention}] has just joined your chat.")
+                return await message.reply_text(f"Call the Avengers, Music bot Owner[{member.mention}] has just joined your chat.")
             if member.id in SUDOERS:
-                return await message.reply_text(f"Tighten your seatbelts, A member of Music's SudoUser[{member.mention}] has just joined your chat.")
+                return await message.reply_text(f"Tighten your seatbelts, A member of Music's bot SudoUser[{member.mention}] has just joined your chat.")
             if member.id == ASSID:
                 await remove_active_chat(chat_id)
             if member.id == BOT_ID:
