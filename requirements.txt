@@ -8,10 +8,8 @@ py-tgcalls
 pytube
 wget
 python-dotenv
-search-engine-parser
 tgcrypto
 git+https://github.com/alexmercerind/youtube-search-python@main
-youtube-search
 speedtest-cli
 cryptography
 dnspython
@@ -21,13 +19,12 @@ motor
 psutil
 pykeyboard
 pyromod
+pymongo
 requests
 speedtest-cli
 uvloop
-yt-dlp
+youtube_dl
+yt-dlp==2021.11.10.1
 telegraph
 hachoir
 lyricsgenius
-pafy
-youtube_dl
-yt_dlp
