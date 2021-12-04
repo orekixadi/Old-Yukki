@@ -1,4 +1,3 @@
-
 import os
 import time
 from os import path
@@ -55,12 +54,12 @@ def time_to_seconds(time):
         int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":")))
     )
 
-@Client.on_message(command(["play", "play@Tg_Vc_00_Bot"]))
+@Client.on_message(command(["play", "play@MentosMusicBot"]))
 async def play(_, message: Message):
     chat_id = message.chat.id
-    if not await is_served_chat(chat_id):
-        await message.reply_text(f"**__Not in allowed chats.__**\n\nOREKIxSONG Pvt is only for allowed chats. Ask any Sudo User to allow your chat.\nCheck Sudo Users List [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
-        return await app.leave_chat(chat_id)  
+#   if not await is_served_chat(chat_id):
+#        await message.reply_text(f"**__Not in allowed chats.__**\n\nMusic Private is only for allowed chats. Ask any Sudo User to allow your chat.\nCheck Sudo Users List [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
+#        return await app.leave_chat(chat_id)  
     if message.sender_chat:
         return await message.reply_text("You're an __Anonymous Admin__!\nRevert back to User Account From Admin Rights.")  
     user_id = message.from_user.id
@@ -74,7 +73,7 @@ async def play(_, message: Message):
         return await message.reply_text(f"Bot is under Maintenance. Sorry for the inconvenience!")
     a = await app.get_chat_member(message.chat.id , BOT_ID)
     if a.status != "administrator":
-        await message.reply_text(f"I need to be admin with some permissions:\n\n- **can_manage_voice_chats:** To manage voice chats\n- **can_delete_messages:** To delete OREKIxSONG Pvt's Searched Waste\n- **can_invite_users**: For inviting assistant to chat\n**can_restrict_members**: For Protecting OREKIxSONG Pvt from Spammers.")
+        await message.reply_text(f"I need to be admin with some permissions:\n\n- **can_manage_voice_chats:** To manage voice chats\n- **can_delete_messages:** To delete Music's Searched Waste\n- **can_invite_users**: For inviting assistant to chat\n**can_restrict_members**: For Protecting Music from Spammers.")
         return
     if not a.can_manage_voice_chats:
         await message.reply_text(
@@ -96,10 +95,12 @@ async def play(_, message: Message):
         "I don't have the required permission to perform this action."
         + "\n**Permission:** __BAN USERS__")
         return
+    chid = message.chat.id
+
     try:
-        b = await app.get_chat_member(message.chat.id , ASSID) 
+        b = await app.get_chat_member(message.chat.id , user_id) 
         if b.status == "kicked":
-            await message.reply_text(f"{ASSNAME}(@{ASSUSERNAME}) is banned in your chat **{chat_title}**\n\nUnban it first to use OREKIxSONG Pvt")
+            await message.reply_text(f"{ASSNAME}(@{ASSUSERNAME}) is banned in your chat **{chat_title}**\n\nUnban it first to use Music")
             return
     except UserNotParticipant:
         if message.chat.username:
@@ -113,14 +114,18 @@ async def play(_, message: Message):
         else:
             try:
                 xxy = await app.export_chat_invite_link(message.chat.id)
-                yxy = await app.revoke_chat_invite_link(message.chat.id, xxy)
-                await ASS_ACC.join_chat(yxy.invite_link)
+                #xxy = xxy.invite_link
+                inv_lnk=str(xxy)
+                inv_lnk = inv_lnk.replace("https://t.me/+","https://t.me/joinchat/")
+                await ASS_ACC.join_chat(inv_lnk)
                 await message.reply(f"{ASSNAME} Joined Successfully",) 
+                #yxy = await app.revoke_chat_invite_link(message.chat.id, xxy)
                 await remove_active_chat(chat_id)
             except UserAlreadyParticipant:
                 pass
             except Exception as e:
-                return await message.reply_text(f"__**Assistant Failed To Join**__\n\n**Reason**:{e}")       
+                return await message.reply_text(f"__**Assistant Failed To Join**__\n\n**Reason**:{e}")               
+              
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
     url = get_url(message)
     await message.delete()
@@ -129,7 +134,7 @@ async def play(_, message: Message):
         fucksemx = 1
         what = "Audio Searched"
         await LOG_CHAT(message, what)
-        mystic = await message.reply_text(f"**🔄 Processing Audio Given By {username}**")
+        mystic = await message.reply_text(f"**🔄 𝙎𝙀𝙍𝙑𝙀𝙍 𝙎𝙇𝙊𝙒 𝙃𝘼 𝙒𝘼𝙄𝙏🤤 {username}**")
         if audio.file_size > 157286400:
             await mystic.edit_text("Audio File Size Should Be Less Than 150 mb") 
             return
@@ -154,7 +159,7 @@ async def play(_, message: Message):
             else file_name,
         )
         title = "Selected Audio from Telegram"
-        link = "https://t.me/iLOSTinY0U"
+        link = "https://t.me/ToxicCybers"
         thumb = "cache/Audio.png"
         videoid = "smex1"
     elif url:
@@ -247,14 +252,14 @@ async def play(_, message: Message):
             buttons = playlist_markup(user_name, user_id)
             hmo = await message.reply_photo(
             photo=thumb, 
-            caption=("**Usage:** /play [Song Name or Youtube Link or Reply to Audio]\n\nIf you want to play Playlists! Select the one from Below."),    
+            caption=("**Usage:** /play [Music Name or Youtube Link or Reply to Audio]\n\nIf you want to play Playlists! Select the one from Below."),    
             reply_markup=InlineKeyboardMarkup(buttons),
             ) 
             return
         what = "Query Given"
         await LOG_CHAT(message, what)
         query = message.text.split(None, 1)[1]
-        mystic = await message.reply_text("**🔄 Searching**")
+        mystic = await message.reply_text("**🔄 𝘿𝙚𝙠𝙝𝙖 𝙧𝙖𝙝𝙖 𝙝𝙪**")
         try:
             a = VideosSearch(query, limit=1)
             for result in a.result()["result"]:
@@ -555,7 +560,7 @@ async def play_playlist_cmd(_, message):
     buttons = playlist_markup(user_name, user_id)
     await message.reply_photo(
     photo=thumb, 
-    caption=("**__OREKIxSONG Pvt's Playlist Feature__**\n\nSelect the Playlist you want to play!."),    
+    caption=("**__Music's Playlist Feature__**\n\nSelect the Playlist you want to play!."),    
     reply_markup=InlineKeyboardMarkup(buttons),
     )
     return
