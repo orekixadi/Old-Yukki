@@ -55,14 +55,11 @@ def time_to_seconds(time):
         int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":")))
     )
 
-@Client.on_message(command(["play", "play@Tg_Vc_00_Bot"]))
+@Client.on_message(command(["play", "ytp"]))
 async def play(_, message: Message):
-    chat_id = message.chat.id
-    if not await is_served_chat(chat_id):
-        await message.reply_text(f"**__Not in allowed chats.__**\n\nOREKIxSONG Pvt is only for allowed chats. Ask any Sudo User to allow your chat.\nCheck Sudo Users List [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
-        return await app.leave_chat(chat_id)  
+    chat_id = message.chat.id  
     if message.sender_chat:
-        return await message.reply_text("You're an __Anonymous Admin__!\nRevert back to User Account From Admin Rights.")  
+        return await message.reply_text("❌ You're an __Anonymous Admin__!\n✅ Revert back to User Account From Admin Rights.")  
     user_id = message.from_user.id
     chat_title = message.chat.title
     username = message.from_user.first_name
@@ -70,57 +67,52 @@ async def play(_, message: Message):
     if await is_on_off(1):
         LOG_ID = "-1001429892362"
         if int(chat_id) != int(LOG_ID):
-            return await message.reply_text(f"Bot is under Maintenance. Sorry for the inconvenience!")
-        return await message.reply_text(f"Bot is under Maintenance. Sorry for the inconvenience!")
+            return await message.reply_text(f">> ❌ Bot is under Maintenance, Sorry for the inconvenience!")
+        return await message.reply_text(f">> ❌ Bot is under Maintenance, Sorry for the inconvenience!")
     a = await app.get_chat_member(message.chat.id , BOT_ID)
     if a.status != "administrator":
-        await message.reply_text(f"I need to be admin with some permissions:\n\n- **can_manage_voice_chats:** To manage voice chats\n- **can_delete_messages:** To delete OREKIxSONG Pvt's Searched Waste\n- **can_invite_users**: For inviting assistant to chat\n**can_restrict_members**: For Protecting OREKIxSONG Pvt from Spammers.")
+        await message.reply_text(f"I need to be admin with some permissions:\n\n>> **can_manage_voice_chats:** To manage voice chats\n>> **can_delete_messages:** To delete Music's Searched Waste\n>> **can_invite_users**: For inviting assistant to chat\n>> **can_restrict_members**: For Protecting Music from Spammers.")
         return
     if not a.can_manage_voice_chats:
         await message.reply_text(
-        "I don't have the required permission to perform this action."
+        "❌ I don't have the required permission to perform this action."
         + "\n**Permission:** __MANAGE VOICE CHATS__")
         return
     if not a.can_delete_messages:
         await message.reply_text(
-        "I don't have the required permission to perform this action."
+        "❌ I don't have the required permission to perform this action."
         + "\n**Permission:** __DELETE MESSAGES__")
         return
     if not a.can_invite_users:
         await message.reply_text(
-        "I don't have the required permission to perform this action."
+        "❌ I don't have the required permission to perform this action."
         + "\n**Permission:** __INVITE USERS VIA LINK__")
-        return
-    if not a.can_restrict_members:
-        await message.reply_text(
-        "I don't have the required permission to perform this action."
-        + "\n**Permission:** __BAN USERS__")
         return
     try:
         b = await app.get_chat_member(message.chat.id , ASSID) 
         if b.status == "kicked":
-            await message.reply_text(f"{ASSNAME}(@{ASSUSERNAME}) is banned in your chat **{chat_title}**\n\nUnban it first to use OREKIxSONG Pvt")
+            await message.reply_text(f"❌ {ASSNAME}(@{ASSUSERNAME}) is banned in your chat **{chat_title}**\n\nUnban it first to use Music")
             return
     except UserNotParticipant:
         if message.chat.username:
             try: 
                 await ASS_ACC.join_chat(f"{message.chat.username}")
-                await message.reply(f"{ASSNAME} Joined Successfully",) 
+                await message.reply(f"✅ {ASSNAME} Joined Successfully",) 
                 await remove_active_chat(chat_id)
             except Exception as e:
-                await message.reply_text(f"__**Assistant Failed To Join**__\n\n**Reason**:{e}")
+                await message.reply_text(f"❌ __**Assistant Failed To Join**__\n\n**Reason**:{e}")
                 return
         else:
             try:
                 xxy = await app.export_chat_invite_link(message.chat.id)
                 yxy = await app.revoke_chat_invite_link(message.chat.id, xxy)
                 await ASS_ACC.join_chat(yxy.invite_link)
-                await message.reply(f"{ASSNAME} Joined Successfully",) 
+                await message.reply(f"✅ {ASSNAME} Joined Successfully",) 
                 await remove_active_chat(chat_id)
             except UserAlreadyParticipant:
                 pass
             except Exception as e:
-                return await message.reply_text(f"__**Assistant Failed To Join**__\n\n**Reason**:{e}")       
+                return await message.reply_text(f"❌ __**Assistant Failed To Join**__\n\n**Reason**:{e}")       
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
     url = get_url(message)
     await message.delete()
